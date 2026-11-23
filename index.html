@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech Experience 2026</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topo">
+    <h1>Tech Experience 2026</h1>
+    <p>Inscreva-se nas oficinas de tecnologia!</p>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Formulário de inscrição</h2>
+      <p>Preencha seus dados e escolha as oficinas de seu interesse.</p>
+
+      <form action="processar.php" method="post" id="form-inscricao">
+        <div class="campo">
+          <label for="nome">Nome completo</label>
+          <input type="text" id="nome" name="nome" required minlength="3">
+        </div>
+
+        <div class="campo">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="campo">
+          <label for="experiencia">Nível de experiência</label>
+          <select id="experiencia" name="experiencia" required>
+            <option value="">Selecione</option>
+            <option value="iniciante">Iniciante</option>
+            <option value="intermediario">Intermediário</option>
+            <option value="avancado">Avançado</option>
+          </select>
+        </div>
+
+        <fieldset>
+          <legend>Turno de preferência</legend>
+          <label class="opcao"><input type="radio" name="turno" value="manha" required> Manhã</label>
+          <label class="opcao"><input type="radio" name="turno" value="noite"> Noite</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Oficinas de interesse (selecione pelo menos uma)</legend>
+          <label class="opcao"><input type="checkbox" name="oficinas[]" value="html_css"> HTML e CSS</label>
+          <label class="opcao"><input type="checkbox" name="oficinas[]" value="js_dom"> JavaScript e DOM</label>
+          <label class="opcao"><input type="checkbox" name="oficinas[]" value="php_backend"> PHP e Backend</label>
+          <p id="erro-oficinas" class="error-message" aria-live="polite"></p>
+        </fieldset>
+
+        <div class="campo">
+          <label for="mensagem">Mensagem / Motivação</label>
+          <textarea id="mensagem" name="mensagem" maxlength="200" rows="4"></textarea>
+          <small id="contador">Restam 200 caracteres</small>
+        </div>
+
+        <button type="submit">Enviar inscrição</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>Tech Experience 2026 — Evento acadêmico de tecnologia</p>
+  </footer>
+</body>
+</html>

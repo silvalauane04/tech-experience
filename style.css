@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f2f5f8;
+  color: #263445;
+  line-height: 1.5;
+}
+
+.topo {
+  background: #173b57;
+  color: white;
+  text-align: center;
+  padding: 30px 15px;
+}
+
+.topo h1 {
+  margin: 0 0 8px;
+}
+
+.container {
+  width: min(700px, 92%);
+  margin: 30px auto;
+}
+
+.card {
+  background: white;
+  padding: 28px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  margin: 18px 0;
+}
+
+label, legend {
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+input[type="text"], input[type="email"], select, textarea {
+  width: 100%;
+  padding: 11px;
+  border: 1px solid #b9c5cf;
+  border-radius: 6px;
+  font: inherit;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: 3px solid #9bc7e4;
+  border-color: #17658e;
+}
+
+fieldset {
+  border: 1px solid #cbd5dd;
+  border-radius: 8px;
+  padding: 14px;
+  margin: 18px 0;
+}
+
+.opcao {
+  display: block;
+  font-weight: normal;
+  margin: 8px 0;
+}
+
+button {
+  width: 100%;
+  padding: 13px;
+  border: 0;
+  border-radius: 7px;
+  background: #17658e;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #104b6b;
+}
+
+.is-invalid {
+  border: 2px solid #c62828 !important;
+}
+
+.error-message {
+  color: #b42318;
+  margin: 6px 0 0;
+}
+
+small {
+  color: #526575;
+  margin-top: 5px;
+}
+
+footer {
+  text-align: center;
+  padding: 18px;
+  color: #526575;
+}
+
+@media (max-width: 500px) {
+  .card {
+    padding: 18px;
+  }
+}
